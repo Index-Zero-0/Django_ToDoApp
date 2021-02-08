@@ -1,0 +1,37 @@
+{% extends 'main/base.html'%}
+{% load static%}
+{% block content %}
+<section class="tasks">
+  <div class="timeGroupStart">
+    <h3 class="title">These are done</h3>
+    <div class="tasksContainer">
+      {% for task in tasks%}
+      {% if user == task.user %}
+      {% if task.is_done == True %}
+      <div class="taskContainer">
+        <div class="task">
+          <a href="{% url 'taskIsImportant' task.id %}" class="btn_favorite">
+            {% if task.is_important %}
+            <i class="fas fa-star"></i>
+            {% else %}
+            <i class="far fa-star"></i>
+            {% endif %}
+          </a>
+          <h4>{{task.title}}</h4>
+          <p class="dateOfTask">Have to be done: <span class="timeTaks">{{task.date_of_task|date:"M, d, Y"}}</span></p>
+        </div>
+        <div class="buttons">
+          <a href="{% url 'deleteTask' task.id %}" class="btn"><i
+              class="fas fa-trash-alt taskButtonsIcon"></i>Delete</a>
+          <a href="{% url 'taskIsDone' task.id %}" class="btn"><i class="fas fa-times-circle notDone"></i>Not
+            Done</a>
+          <a href="{% url 'updateTask' task.id %}" class="btn"><i class="fas fa-edit taskButtonsIcon"></i>Update</a>
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% endblock content%}

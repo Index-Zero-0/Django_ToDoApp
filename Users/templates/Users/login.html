@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2 class="loginTitle">Sign in</h2>
+{%if error%}
+<div class="errorWrongAuthentication">
+    <p>{{error}}</p>
+</div>
+{%endif%}
+<div class="loginForm">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="formGroup">
+            <label for="id_username">Username</label>
+            <input type="text" name="username" maxlength="150" autofocus class="textInput form-control" required
+                id="id_username">
+        </div>
+
+        <div class="formGroup">
+            <label for="id_password1">Password</label>
+            <input type="password" name="password" autocomplete="new-password" class="textInput form-control" required
+                id="id_password1">
+        </div>
+        <div class="submitButton">
+            <button type="submit" class="btn-signIn">Sign in</button>
+        </div>
+        <a href="{%url 'login' %}" class="forgottenPassword"><small>Forgotten password?</small></a>
+        <div class="link-to-register">
+            <small>* doesn't have any account?</small>
+            <a href="{%url 'register' %}" class="link-to-register">&nbsp;&nbsp; Sign up</a>
+        </div>
+    </form>
+
+</div>
+{% endblock content%}

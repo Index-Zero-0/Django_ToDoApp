@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="{% static 'main/main.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/777030f88a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <aside>
+        <div class="nav-top">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout'%}" class="btn-login">Log out</a>
+            {%else%}
+            <a href="{% url 'login'%}" class="btn-login">Log in</a>
+            {%endif%}
+            <div id="login-seperator"></div>
+        </div>
+        <div class="nav-middle-bottom">
+            <a class="nav-middle-link all_items" href="{% url 'main_home'%}">
+                <img src="{% static 'main/images/icons/list.png' %}" class="aside-icon">
+                <span>All</span>
+            </a>
+            <a class="nav-middle-link" href="{% url 'main_today' %}">
+                <img src="{% static 'main/images/icons/calendar.png' %}" class="aside-icon">
+                <span>Today</span>
+            </a>
+            <a class="nav-middle-link" href="{% url 'main_week' %}">
+                <img src="{% static 'main/images/icons/seven.png' %}" class="aside-icon">
+                <span>Next 7 days</span>
+            </a>
+            <a class="nav-middle-link" href="{% url 'importantTasks' %}">
+                <img src="{% static 'main/images/icons/important.png' %}" class="aside-icon">
+                <span>Important</span>
+            </a>
+            <a class="nav-middle-link" href="{% url 'doneList' %}">
+                <img src="{% static 'main/images/icons/tick.png' %}" class="aside-icon">
+                <span>Done</span>
+            </a>
+        </div>
+        <div class="nav-middle-bottom">
+            <a class="nav-middle-link aboutButton" href="#"><img src="{% static 'main/images/icons/info.png' %}" class="aside-icon">
+                <span>About</span>
+            </a>
+        </div>
+    </aside>
+    <main>
+        <section class="main_head">
+            {% if user.is_authenticated%}
+            <a href="{% url 'addNewTask' %}" class="add-task"><img src="{% static 'main/images/icons/add.png' %}" class="aside-icon"></a>
+            <form action="#">
+                <input type="search" placeholder="Find your task by title">
+                <i class="fa fa-search"></i>
+            </form>
+            {% endif%}
+        </section>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert-{{ message.tags }}">{{message}}</div>
+        {% endfor %}
+        {% endif %}
+        {% block content %}
+        {% endblock content%}
+    </main>
+    <script src="{% static 'main/script.js' %}" type="text/javascript"></script>
+</body>
+
+</html>

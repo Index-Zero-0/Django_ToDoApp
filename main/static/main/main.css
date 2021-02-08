@@ -1,0 +1,628 @@
+
+*{
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+html{
+    height: 100%;
+}
+
+
+body{
+    font-size: 16px;
+    display:flex;
+    height: 100%;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+aside{
+    border-radius: 0px;
+    width: 15%;
+    background-color:#003270;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside *{
+    font-size: 1.1em;
+    color: white;
+}
+
+.nav-top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#login-seperator{
+    margin: 10px auto;
+    height: 5px;
+    width: 90%;
+    border-bottom: 1px solid #eee;
+}
+.btn-login{
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color:#14acff;
+    outline: none;
+}
+
+.btn-login:hover{
+   background-color:#1f88c2;
+}
+
+
+aside .nav-middle-bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-middle-bottom .aboutButton{
+    margin-bottom:5px;
+}
+
+.nav-middle-link{
+    padding: 10px 0;
+    width: 100%;
+}
+
+.nav-middle-link span{
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+.nav-middle-link:hover{
+    background-color: brown;
+}
+
+
+.aside-icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+main{
+    padding: 10px 20px;
+    padding-right: 40px;
+    width: 85%;
+    overflow-y:auto;
+}
+
+.main-1{
+    color: black;
+    text-align:center;
+    display: flex;
+    flex-direction:column;
+}
+
+.main-1 img{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main-1 section{
+    margin: 5px auto;
+}
+
+.main-1 section h2{
+    font-size: 50px;
+}
+
+.main-1 section h4{
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.all_items{
+    margin-bottom: 30px;
+}
+.registerTitle{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.registerForm{
+    width: 50%;;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 50px 10px 20px;
+    color: #000;
+}
+
+.loginForm{
+    width: 40%;;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 5px 10px 20px;
+    color: #000;
+}
+
+.loginForm form{
+    height: 700px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.registerForm form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup2{
+    display: flex;
+    flex-direction: row;
+}
+
+.formGroup2 div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#id_first_name{
+    width: 90%;
+}
+
+.textInput{
+    border: 1px solid gray;
+    font-size: medium;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.textInput:focus{
+    outline-color:rgba(53, 137, 194,50%);
+    border:2px solid rgba(22, 140, 219,80%) ;
+    outline-offset: 1px;
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    color:black;
+}
+
+
+.alert-success{
+    margin:0 auto;
+    padding:5px 10px;
+    background-color: green;
+    border-radius:3px;
+    color:#fff;
+    width: 100%;
+}
+
+.alert-info{
+    margin:0;
+    padding:5px 10px;
+    background-color: #dbdbdb;
+    border-radius:3px;
+    color:#fff;
+}
+
+.alert-warning{
+    margin:0;
+    padding:5px 10px;
+    background-color:#d63e33;
+    border-radius:3px;
+    color:#fff; 
+}
+
+.invalid-feedback{
+    color:rgb(225, 28, 231);
+    font-size:14px;
+}
+
+.btn-register{
+    margin: 100px auto 20px;
+    padding: 10px 70px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    color:#000;
+    border: 0;
+    background-color:#1392d6;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-register:hover{
+    background-color:#00a2ff;
+}
+.submitButton{
+    display: flex;
+    justify-content: center;
+}
+
+.text-muted{
+    color: #3b3b3b;
+}
+
+.error{
+    list-style-type: none;
+    font-size: 1em;
+    color: rgb(209, 7, 7);
+    font-weight:300;
+    margin: 0px auto;
+    width: 35%;
+    border-radius: 3px;
+    padding: 5px 20px;
+    border-bottom:1px solid white;
+}
+
+
+.loginTitle{
+    text-align: center;
+    margin: 100px auto 0;
+}
+
+.btn-signIn{
+    margin: 100px auto 20px;
+    padding: 10px 50px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 500;
+    color:#000;
+    border: 0;
+    background-color:#1392d6;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-signIn:hover{
+    background-color:#00a2ff;
+}
+
+.link-to-register{
+    margin-top:auto;
+    margin-bottom: 10px;
+    text-align:center;
+}
+
+.errorWrongAuthentication{
+    padding: 5px;
+    width: 200px;
+    margin: 20px auto 0;
+    text-align: center;
+    color: rgb(184, 2, 2);
+}
+
+.forgottenPassword{
+    margin-bottom: 10px;
+    text-align:center;
+}
+
+.logut{
+    margin: 200px auto;
+    text-align: center;
+}
+
+.main_head{
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin-top: 0;
+    background-color:#003270;
+}
+
+a.add-task{
+    position: absolute;
+    left: 20px;
+    top:15px;
+}
+
+.main_head form {
+    position: absolute;
+    right: 20px;
+    top: 27.5px;
+    transform: translate(0%, -50%);
+    transition: all 1s;
+    width: 40px;
+    height: 40px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+.main_head form input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33px;
+    line-height: 20px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa {
+    box-sizing: border-box;
+    padding: 8px;
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1em;
+    transition: all 1s;
+}
+
+.main_head form:hover {
+    width:300px;
+    cursor: pointer;
+}
+
+.main_head form:hover input {
+    display: block;
+}
+
+.main_head form:hover .fa {
+    background: #07051a;
+    color: white;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    margin:40px 90px;
+}
+.tasksContainer{
+    margin: 2px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:30px 0;
+}
+
+.task{
+    color:rgb(0, 102, 255);
+    text-align: center;
+    background-color: rgb(194, 194, 194);
+    border:0;
+    box-sizing: border-box;
+    width:400px;
+    padding: 0 5px;
+    margin: 10px 0 0 20px;
+    transition: all 500ms;
+    border-radius: 4px;
+}
+
+.dateOfTask{
+    color: rgb(54, 54, 54);
+}
+
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+}
+.taskContainer:hover .buttons, .task{
+    opacity: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+
+.buttons{
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    align-items: stretch;
+    width: 400px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.btn{
+    margin:0;
+    width: 100%;
+    text-align: center;
+    height: 25px;
+    outline: none;
+    border: 0;
+    border-radius: 0;
+    padding-top: 6px;
+    background-color: rgb(23, 115, 235);
+    color:#fff;
+}
+.btn:hover{
+    background-color:rgb(80, 80, 80);
+}
+
+.title{
+    margin: 0;
+    padding:5px 10px;
+    max-width: 100%;
+    border-bottom:1px solid rgb(173, 173, 173);
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+}
+
+.taskButtonsIcon{
+    color:rgb(129, 248, 125);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.notDone{
+    color:rgb(167, 36, 36);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.timeGroup,.timeGroupEnd{
+    margin-top: 50px;
+}
+
+.timeGroupStart{
+    margin-top: 30px;
+}
+
+.Add{
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+}
+
+#addTaksTitle{
+    border-bottom: 1px solid rgb(34, 34, 34);
+    text-align:center;
+    margin: 10px auto;
+    padding-bottom: 20px;
+    width: 50%;
+}
+
+.addForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.addForm form{
+    width: 500px;
+    max-width: 500px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.addForm form input, textarea{
+    font-size: 16px;
+    padding: 7px;
+    border: 1px solid rgb(146, 146, 146);
+}
+
+.addForm form label{
+    margin-top: 40px;
+}
+
+.addForm form input:focus, textarea:focus{
+    outline-color:rgba(173, 60, 32,50%);
+    outline-offset: 1px;
+
+}
+textarea{
+    resize: none;
+}
+
+#dateShouldBeDone,#timeShouldBeDone{
+    width: 250px;
+}
+
+.addForm form .btn-add{
+    background-color: #6e2411;
+    color: white;
+    border-radius: 4px;
+    border: 0;
+    margin: 100px auto;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 200px;
+    padding: 5px 0;
+}
+
+.addForm form .btn-add:hover{
+    background-color: #d43b15;
+}
+
+.timeTaks{
+    color: rgb(146, 35, 15);
+    padding-left: 15px;
+}
+
+.fillTheFields{
+    color: rgb(146, 33, 13);
+}
+
+.delete{
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.delete p{
+    color: rgb(0, 76, 241);
+}
+
+.delete form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+    width: 300px;
+}
+
+.btnYes{
+    padding: 10px;
+    background-color: rgb(17, 187, 54);
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+}
+
+.btnCancel{
+    padding: 10px;
+    background-color: rgb(207, 38, 8);
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+}
+
+.task .btn_favorite{
+    width: 20px;
+    display: flex;
+    color: red;
+    margin: 10px auto 0px 10px;
+    justify-content: left;
+    cursor:unset;
+}
+
+
+@media screen and (max-width:1400px){
+    aside span{
+        display: none;
+    }
+    .nav-middle-link img{
+        display: block;
+        margin: auto;
+    }
+}

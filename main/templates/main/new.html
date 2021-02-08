@@ -1,0 +1,28 @@
+{% extends 'main/base.html'%}
+{% load static%}
+{% block content %}
+<div class="Add">
+    <h3 id="addTaksTitle">Add a new task</h3>
+    <section class="addForm">
+        {% if fieldIsNotFilled %}
+        <h5 class="fillTheFields">fieldIsNotFilled</h5>
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <label for="title">* Title</label>
+            <input type="text" name="title" id="title" maxlength="80" required>
+
+            <label for="text">Text</label>
+            <textarea id="text" name="text" rows="6" cols="50" maxlength="400"></textarea>
+
+            <label for="dateShouldBeDone">* Date should be done</label>
+            <input type="date" name="date" id="dateShouldBeDone" required>
+
+            <label for="timeShouldBeDone">* Time should be done</label>
+            <input type="time" name="time" id="timeShouldBeDone" value="00:00" required>
+
+            <input type="submit" class="btn-add">
+        </form>
+    </section>
+</div>
+{% endblock content%}

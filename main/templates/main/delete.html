@@ -1,0 +1,15 @@
+{% extends 'main/base.html'%}
+{% load static%}
+{% block content %}
+<section class="delete">
+    <div>
+        <h2>Are you sure you want delete?</h2>
+        <p>"{{ task.title }}"</p>
+        <form action="{% url 'deleteTask' task.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btnYes">Yes, I am sure!</button>
+            <a class="btnCancel" href="{% url 'main_home' %}">Cancel</a>
+        </form>
+    </div>
+</section>
+{% endblock content%}

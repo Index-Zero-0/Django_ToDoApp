@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<h2 class="registerTitle">Create a new account</h2>
+{% if errors %}
+{% for error in errors %}
+<h6 class="error">* {{error}}</h6>
+{% endfor%}
+{%endif%}
+<div class="registerForm">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="formGroup2">
+            <div>
+                <label for="id_first_name">First name</label>
+                <input type="text" name="first_name" maxlength="30" required id="id_first_name" class="textInput">
+            </div>
+            <div>
+                <label for="id_last_name">Last name</label>
+                <input type="text" name="last_name" maxlength="30" required id="id_last_name" class="textInput">
+            </div>
+        </div>
+        <div class="formGroup">
+            <label for="id_username">Username</label>
+            <input type="text" name="username" maxlength="150" autofocus class="textInput" required id="id_username">
+            <small class="text-muted">150 characters or fewer. Letters, digits and @/./+/-/_ only.</small>
+        </div>
+
+        <div class="formGroup">
+            <label for="id_password1">Password</label>
+            <input type="password" name="password1" autocomplete="new-password" class="textInput" required
+                id="id_password1">
+        </div>
+        <small id="hint_id_password1" class="text-muted">
+            <ul>
+                <li>Your password can’t be too similar to your other personal information.</li>
+                <li>Your password must contain at least 8 characters.</li>
+                <li>Your password can’t be a commonly used password.</li>
+                <li>Your password can’t be entirely numeric.</li>
+            </ul>
+        </small>
+        <div class="formGroup">
+            <label for="id_password2">Password confirmation</label>
+            <input type="password" name="password2" autocomplete="new-password" class="textInput form-control" required
+                id="id_password2" class="formInput">
+        </div>
+        <div class="formGroup">
+            <label for="id_email">Email</label>
+            <input type="email" name="email" maxlength="254" class="emailinput textInput" id="id_email">
+        </div>
+        <div class="submitButton">
+            <button type="submit" class="btn-register">Create account</button>
+        </div>
+        <a href="{%url 'login' %}" class="link-to-register"><small>Already have account?</small></a>
+    </form>
+</div>
+
+{% endblock content%}
