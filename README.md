@@ -8,8 +8,7 @@ This is a Todo app bulit in with Django.
   * Once you have django installed, go to the cloned repo directory and run the following command:\
   ```$ python manage.py makemigrations```\
   ```$ python manage.py migrate```
-  * You have to also add a superuser by this command:
-  ```python manage.py createsuperuser```
+  * You should also add a superuser: ```python manage.py createsuperuser```
   
   
 ## Icons:
