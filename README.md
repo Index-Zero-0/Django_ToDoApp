@@ -5,7 +5,7 @@ This is a Todo app bulit in with Django.
 
 ## Setup
   * After you downloaded the repository make sure you have Django installed.
-  * Once you have django installed, go to the cloned repo directory and run the following command:\
+  * Once you have django installed, go to the cloned repo directory and run the following commands:\
   ```$ python manage.py makemigrations```\
   ```$ python manage.py migrate```
   * You should also add a superuser: ```python manage.py createsuperuser```
